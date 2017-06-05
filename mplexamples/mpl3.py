@@ -10,7 +10,7 @@ data = np.genfromtxt('codeplexCreateDates.csv', delimiter=',', skip_header=0,
                      skip_footer=0, names=['x', 'xlabels', 'y'])
 
 # remove points that are too high
-check = (data['z'] < 1000)
+check = (data['y'] < 1000)
 data = data[check]
 
 plt.plot(data['x'], data['y'], color='r', label='the data')
