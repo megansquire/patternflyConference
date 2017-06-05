@@ -8,10 +8,10 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 data = np.genfromtxt('codeplexCreateDates.csv', delimiter=',', skip_header=0,
-                     skip_footer=0, names=['x', 'y', 'z'])
+                     skip_footer=0, names=['x', 'xlabels', 'y'])
 
 # remove data points that are too high (spam projects)
 check = (data['z'] < 1000)
 data = data[check]
 
-plt.plot(data['x'], data['z'], color='r', label='the data')
+plt.plot(data['x'], data['y'], color='r', label='the data')
