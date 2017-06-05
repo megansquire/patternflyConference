@@ -9,7 +9,6 @@ import matplotlib.pyplot as plt
 
 data = np.genfromtxt('codeplexCreateDates.csv', delimiter=',', skip_header=0,
                      skip_footer=0, names=['x', 'y', 'z'])
-print(data)
 
 # remove data points that are too high (spam projects)
 check = (data['z'] < 1000)
